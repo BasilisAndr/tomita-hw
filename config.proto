@@ -1,0 +1,27 @@
+encoding "utf8";
+
+TTextMinerConfig {
+  Dictionary = "mydic.gzt";
+
+  PrettyOutput = "PrettyOutput.html";
+
+  //Input = {
+  //  File = "book_58.txt";
+  //}
+
+  Articles = [
+    { Name = "имя" }
+    , { Name = "People" }
+    , { Name = "Object" }
+  ]
+
+  Facts = [
+    { Name = "Person" }
+    , { Name = "Object" }
+  ]
+
+  Output = {
+    //File = "facts.proto";
+    Format = proto;
+  }
+}
