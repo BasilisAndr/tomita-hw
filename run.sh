@@ -1,3 +1,5 @@
+mkdir facts
+
 for f in ../factRuEval-2016/devset/*.txt; 
 do 
   name=`echo $f | grep -E -o "book_[0-9]+"`;
