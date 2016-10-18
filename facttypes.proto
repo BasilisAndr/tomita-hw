@@ -4,7 +4,7 @@ import "facttypes_base.proto";
 message Person: NFactType.TFact
 {
     required string Type = 1 [ default = "PER" ];
-    required NFactType.TFio Name = 2;
+    required string Name = 2;
 }
 
 message Object: NFactType.TFact

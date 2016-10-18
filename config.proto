@@ -12,7 +12,8 @@ TTextMinerConfig {
   Articles = [
     { Name = "имя" }
     , { Name = "People" }
-    , { Name = "Object" }
+    , { Name = "Org" }
+    , { Name = "Loc" }
   ]
 
   Facts = [

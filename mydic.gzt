@@ -10,6 +10,63 @@ TAuxDicArticle "org_descr"
     key = { "dic_org_descr.txt" type=FILE }
 }
 
+TAuxDicArticle "loc_descr"
+{
+    key = { "dic_loc_descr.txt" type=FILE }
+}
+
+TAuxDicArticle "geo_direction"
+{
+    key = { "dic_direction.txt" type=FILE }
+}
+
+TAuxDicArticle "country"
+{
+    key = { "dic_country.txt" type=FILE }
+}
+// dic_country.txt - результат выполнения SPARQL-запроса (текст запроса - см. ниже) на https://query.wikidata.org
+// 
+// SELECT ?countryLabel
+// WHERE 
+// {
+//   ?country wdt:P31 wd:Q6256
+//	
+//   SERVICE wikibase:label { bd:serviceParam wikibase:language "ru,en" . }
+// } 
+
+TAuxDicArticle "country_short_name"
+{
+    key = { "dic_country_short_name.txt" type=FILE }
+}
+
+TAuxDicArticle "city"
+{
+    key = { "dic_city.txt" type=FILE }
+}
+// SELECT ?cityLabel
+// WHERE
+// {
+//   ?city wdt:P1082 ?population .
+//   
+//   FILTER(?population>100000)
+//   
+//   ?city wdt:P31 wd:Q515;
+//   
+//   SERVICE wikibase:label { bd:serviceParam wikibase:language "ru,en" . }  
+// }
+
+TAuxDicArticle "other_location"
+{
+    key = { "dic_loc_other.txt" type=FILE }
+}
+// Список того, что часто всречается, но не вытащилось из Wikidata
+// TODO: разобрать и навести порядок
+
+TAuxDicArticle "astronomical_object"
+{
+    key = { "dic_solar_system.txt" type=FILE }
+}
+
 TAuxDicArticle "имя"
 {
     key = { "alg:fio" type=CUSTOM }
@@ -20,7 +77,12 @@ TAuxDicArticle "People"
     key = { "tomita:people.cxx" type=CUSTOM }
 }
 
-TAuxDicArticle "Object"
+TAuxDicArticle "Org"
 {
-    key = { "tomita:object.cxx" type=CUSTOM }
+    key = { "tomita:org.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "Loc"
+{
+    key = { "tomita:loc.cxx" type=CUSTOM }
 }

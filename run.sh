@@ -13,4 +13,4 @@ do
   python convert/parsefacts.py $f > facts/$name.task1 ;
 done
 
-python3 ../factRuEval-2016/scripts/t1_eval.py -s ../factRuEval-2016/devset/ -t facts/ -o reports/
+python3 ../factRuEval-2016/scripts/t1_eval.py -s ../factRuEval-2016/devset/ -t facts/ -o reports/ -l
