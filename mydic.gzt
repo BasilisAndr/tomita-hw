@@ -86,3 +86,8 @@ TAuxDicArticle "Loc"
 {
     key = { "tomita:loc.cxx" type=CUSTOM }
 }
+
+TAuxDicArticle "organisation"
+{
+    key = { "dic_org_other.txt" type=FILE }
+}
